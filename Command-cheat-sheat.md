@@ -350,38 +350,7 @@ kubectl create -f persistent-volume-claim.yaml
 
 # Kubernetes Command Reference
 
-| Category | Command | Options | Minimal Definition |
-|----------|---------|---------|-------------------|
-| **Cluster Management** | `kubectl cluster-info` | | Display cluster connection information |
-| | `kubectl get nodes` | `-o wide` | List all nodes in the cluster |
-| | `kubectl describe nodes` | `<node-name>` | Detailed node information |
-| **Namespace Operations** | `kubectl get namespaces` | `-A` | List all namespaces |
-| | `kubectl create namespace` | `<name>` | Create a new namespace |
-| | `kubectl config set-context` | `--current --namespace=<name>` | Set default namespace |
-| **Pod Management** | `kubectl get pods` | `-A`, `-o wide` | List all pods |
-| | `kubectl run` | `<pod-name> --image=<image>` | Create a new pod |
-| | `kubectl describe pod` | `<pod-name>` | Get detailed pod information |
-| | `kubectl logs` | `<pod-name>` | View pod logs |
-| | `kubectl exec` | `-it <pod-name> -- /bin/bash` | Execute command in pod |
-| **Deployment Operations** | `kubectl create deployment` | `<name> --image=<image>` | Create a deployment |
-| | `kubectl get deployments` | | List all deployments |
-| | `kubectl scale deployment` | `<name> --replicas=<number>` | Change number of replicas |
-| | `kubectl set image deployment` | `<name> <container>=<image>` | Update deployment image |
-| | `kubectl rollout undo` | `deployment/<name>` | Rollback to previous deployment |
-| **Service Management** | `kubectl get services` | | List all services |
-| | `kubectl expose deployment` | `<name> --port=<port> --type=<type>` | Create a service for deployment |
-| **ConfigMap & Secrets** | `kubectl create configmap` | `<name> --from-literal=<key>=<value>` | Create configuration map |
-| | `kubectl create secret` | `generic <name> --from-literal=<key>=<value>` | Create secret |
-| **Resource Management** | `kubectl create` | `-f <filename.yaml>` | Create resources from file |
-| | `kubectl apply` | `-f <filename.yaml>` | Apply configuration to resources |
-| | `kubectl delete` | `-f <filename.yaml>` | Delete resources |
-| **Networking** | `kubectl get networkpolicy` | | List network policies |
-| **Storage** | `kubectl get pv` | | List Persistent Volumes |
-| | `kubectl get pvc` | | List Persistent Volume Claims |
-| **Debugging** | `kubectl describe` | `<resource> <name>` | Get detailed resource information |
-| | `kubectl logs` | `<pod-name>` | View container logs |
-| | `kubectl top` | `nodes`, `pods` | View resource consumption |
-
+https://claude.site/artifacts/409bbb5d-6f1b-4d14-b4b3-9cb5bb97c956
 ## Quick Exam Tips
 - Use `--dry-run=client -o yaml` to generate YAML templates
 - Practice both imperative (`kubectl run`) and declarative (`kubectl apply -f`) approaches
